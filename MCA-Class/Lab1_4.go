@@ -1,4 +1,7 @@
-//Q.Utilize the principles of Variables, Control Flow, Arrays, Slices, Maps, and Structs within a specified domain of your choice. Begin the program with a comprehensive overview detailing the scenario and the concepts being implemented. Ensure adequate comments are provided throughout the code. Evaluation of this program will be based on the following criteria:
+//Q.Utilize the principles of Variables, Control Flow, Arrays, Slices, Maps, and Structs
+// within a specified domain of your choice. Begin the program with a comprehensive overview detailing 
+//the scenario and the concepts being implemented. Ensure adequate comments are provided throughout the code.
+// Evaluation of this program will be based on the following criteria:
 //R1: Concept Clarity/Viva: 8 Marks
 //R2: Correctness: 8 Marks
 //R3: Validations( only with if statement expected): 8 Marks
