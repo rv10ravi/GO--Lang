@@ -7,24 +7,24 @@ import (
 	"time"
 )
 
-// Bookstore represents the bookstore where books are sold.
 type Bookstore struct {
-	stock map[string]int // Stock of books with their quantities
+	stock map[string]int 
 	mu    sync.Mutex     // Mutex to synchronize access to stock
 }
 
-// NewBookstore creates a new Bookstore instance.
+
 func NewBookstore() *Bookstore {
 	return &Bookstore{
 		stock: map[string]int{
-			"Harry Potter":  10,
+			"Harry Potter":  1,
 			"Lord of Rings": 15,
 			"Game of Thrones": 20,
+			"Atomic Habits": 5,
 		},
 	}
 }
 
-// PurchaseBook simulates a customer purchasing a book from the bookstore.
+
 func (b *Bookstore) PurchaseBook(book string, wg *sync.WaitGroup, ch chan string) {
 	defer wg.Done()
 
@@ -55,7 +55,7 @@ func main() {
 	var wg sync.WaitGroup
 
 	// Simulate multiple customers purchasing books concurrently
-	for _, book := range []string{"Harry Potter", "Lord of Rings", "Game of Thrones", "Harry Potter"} {
+	for _, book := range []string{"Harry Potter", "Lord of Rings", "Game of Thrones", "Atomic Habits", "Harry Potter"} {
 		wg.Add(1)
 		go bookstore.PurchaseBook(book, &wg, purchaseCh)
 	}
